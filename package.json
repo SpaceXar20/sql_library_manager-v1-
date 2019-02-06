@@ -1,0 +1,26 @@
+{
+  "name": "sql_library_manager-v1-",
+  "version": "1.0.0",
+  "description": "A web application that uses SQL ORM Sequelize to create pages to list, add, update and delete books for a library database",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SpaceXar20/sql_library_manager-v1-.git"
+  },
+  "author": "Erik Lopez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SpaceXar20/sql_library_manager-v1-/issues"
+  },
+  "homepage": "https://github.com/SpaceXar20/sql_library_manager-v1-#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "pug": "^2.0.3",
+    "sequelize": "^4.42.0",
+    "sequelize-cli": "^5.4.0",
+    "sqlite3": "^4.0.6"
+  }
+}
