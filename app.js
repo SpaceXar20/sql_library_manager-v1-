@@ -1,3 +1,5 @@
+//this will be my main file
+
 var sequelize = require("models").sequelize //require sequelize
 
 //use require method to require the express module

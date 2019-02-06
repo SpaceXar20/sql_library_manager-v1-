@@ -1,6 +1,9 @@
+/*this is the Book model, the attributes here have the same name
+as the columns from the Books table from "library.db"*/
+
 'use strict';
 module.exports = (sequelize, DataTypes) => {
-  const Books = sequelize.define('Books', {
+  const Book = sequelize.define('Book', {
     title: {
       type:  DataTypes.STRING,
       validate: {
@@ -20,8 +23,8 @@ module.exports = (sequelize, DataTypes) => {
     genre: DataTypes.STRING,
     year: DataTypes.INTEGER
   }, {});
-  Books.associate = function(models) {
+  Book.associate = function(models) {
     // associations can be defined here
   };
-  return Books;
+  return Book;
 };
