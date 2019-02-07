@@ -6,7 +6,7 @@
  //I will set up the home route by using the Router constructor to create a router instance
  const router = express.Router();
 
-/*get / - Home route should redirect to the /books route, and catch for errors.*/
+/*get / - Home route should redirect to the /books route*/
 router.get('/', function(req, res, next) {
     res.redirect('/books')
 });

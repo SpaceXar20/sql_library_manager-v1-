@@ -9,6 +9,6 @@ const router = express.Router();
 var Book = require("../models").Book; //require book model into books.js route file
 
 // create get /books - Shows the full list of books.
-router.get('/books', function(req, res,next) {
-  Book.findall()        
+router.get('/', function(req, res) {
+      
 });
