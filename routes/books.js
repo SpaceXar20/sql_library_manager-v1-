@@ -10,5 +10,7 @@ var Book = require("../models").Book; //require book model into books.js route f
 
 // create get /books - Shows the full list of books.
 router.get('/', function(req, res) {
-      
+  Book.findAll();      
 });
+
+module.exports = router;

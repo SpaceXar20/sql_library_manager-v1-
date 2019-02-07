@@ -42,7 +42,7 @@ var books = require('./routes/books');
 app.use('/', routes); 
 console.log('app.js has received the index route');
 
-app.use('/books', books);
+app.use('/books', books)
 console.log('app.js has received the books route');
 
 //I watched joel's middleware video as a reference for the error handler
