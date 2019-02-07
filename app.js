@@ -1,6 +1,6 @@
 //this will be my main file
 
-var sequelize = require("models").sequelize //require sequelize
+var sequelize = require("./models").sequelize //require sequelize
 
 //use require method to require the express module
 const express = require('express');
@@ -35,11 +35,15 @@ to parameter pug*/
 app.set('view engine', 'pug');
 
 //import routes from index.js
-const appRoutes = require('./routes/index.js');
+const routes = require('./routes/index.js');
+var books = require('./routes/books');
 
-//use routes variable in a middleware function to pass in the routes
-app.use(appRoutes); 
-console.log('app.js has received the routes');
+//use routes,books variables in a middleware function to pass in the routes
+app.use('/', routes); 
+console.log('app.js has received the index route');
+
+app.use('/books', books);
+console.log('app.js has received the books route');
 
 //I watched joel's middleware video as a reference for the error handler
 // catch 404 and forward to error handler

@@ -4,7 +4,8 @@
   "description": "A web application that uses SQL ORM Sequelize to create pages to list, add, update and delete books for a library database",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
