@@ -2,8 +2,8 @@
 as the columns from the Books table from "library.db"*/
 
 'use strict';
-module.exports = (sequelize, DataTypes) => {
-  const Book = sequelize.define('Book', {
+module.exports = (sequelize, DataTypes) => { 
+  const Book = sequelize.define('Book', { //Starting with Sequelize 4.0, class and instance methods are no longer defined via the sequelize.define() method. Instead, you add them to the ES2015 class that's returned by the sequelize.define() method
     title: {
       type:  DataTypes.STRING,
       validate: {

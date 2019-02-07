@@ -82,7 +82,7 @@ if (app.get('env') === 'development') {
 /*setup the development server using the listen method
 and give parameter of 3000 which is the port number*/
 
-sequelize.sync()
+sequelize.sync() //the sync method automatically creates or updates any database tables
 .then(() => {
     app.listen(3000, () => console.log('Application running on localhost:3000'));
 });
