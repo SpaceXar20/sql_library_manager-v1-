@@ -10,18 +10,14 @@ var Book = require("../models").Book; //require book model into books.js route f
 
 // create get /books - Shows the full list of books. and catch error
 router.get('/', function(req, res) {
-  Book.findAll({order: [["createdAt", "DESC"]]}).then(function(books) {
-    res.render(''); //I will have to render a pug file here
-  }).catch(function(err){
-    res.send(500);
-  })    
+  res.render('index.pug'); //I will have to render a pug file here
 });
 
 
 /*This route shows the new book form
 Create get/books/new route. */
-router.get('/books/new', function(req, res, next) {
-  res.render('') //most likely render new-book.pug
+router.get('/new', function(req, res, next) {
+  res.render('new-book.pug') //most likely render new-book.pug
 });
 
 
@@ -34,8 +30,8 @@ router.post('/books/new', function(req, res, next) {
 
 /*Show books detail form
 Create get /books/:id route */
-router.get('/books/:id', function(req, res, next) {
-  res.render('') //most likely render the pug file for each books detail
+router.get('/:id', function(req, res, next) {
+  res.render('update-book.pug') //most likely render the pug file for each books detail
 });
 
 
