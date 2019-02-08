@@ -16,7 +16,7 @@ router.get('/', function(req, res) {
 
 /*This route shows the new book form
 Create get/books/new route. */
-router.get('/new', function(req, res, next) {
+router.get('/books/new', function(req, res, next) {
   res.render('new-book.pug', {books: Book.build(), title: "New Book"}); //most likely render new-book.pug
 });
 
