@@ -8,10 +8,14 @@ const router = express.Router();
 
 var Book = require("../models").Book; //require book model into books.js route file
 
+
 // create get /books - Shows the full list of books. and catch error
-router.get('/', function(req, res) {
-  res.render('index.pug'); //I will have to render a pug file here
-});
+router.get('/books', function(req, res, next) { 
+  Book.findAll({order: [["Title", "ASC"]]}).then(function(books){ //use findAll method to grab data from the database, and order the books alphabetically by Title
+    // console.log(books)
+    res.render('index.pug', {books: books, title: "Books"}); //Render the index.pug file and pass it the books data from the function in order to create the tables
+  }); 
+}); 
 
 
 /*This route shows the new book form
